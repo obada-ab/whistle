@@ -1,0 +1,38 @@
+<% cards.forEach(function(card) { %>
+<div class="card is-shadowless">
+    <div class="card-content">
+        <div class="media">
+            <div class="media-left">
+                <figure class="image is-48x48">
+                    <img class="is-rounded" src="<%= card.author.thumbnail %>" alt="Placeholder image">
+                </figure>
+            </div>
+            <div class="media-content">
+                <p class="title is-4"><%= card.author.username %></p>
+            </div>
+        </div>
+  
+        <div class="content">
+            <%= card.content %>
+        </div>
+        <% if(card.imageFilename) { %>
+            <div class="card-image">
+                <figure class="image">
+                    <img src="<%= 'images/' + card.imageFilename %>" alt="Placeholder image">
+                </figure>
+            </div>
+        <% } %>
+    </div>
+    <div class="card-footer">
+        <% var liked = card.likes.some(el => el.discordID == user.discordID); %>
+        <button class="card-footer-item button is-rounded <%= liked ? 'active-element' : '' %>" data-id="<%= card.id %>"
+        data-liked="<%= liked %>"
+        onclick="onLike(this)">
+            <span class="icon">
+                <i class="fas fa-heart"></i>
+            </span>
+            <span><%= card.likeCount %></span>
+        </button>
+    </div>
+</div>
+<% }); %>

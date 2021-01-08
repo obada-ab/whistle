@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" integrity="sha512-ZRv40llEogRmoWgZwnsqke3HNzJ0kiI0+pcMgiz2bxO6Ew1DVBtWjVn0qjrXdT3+u+pSN36gLgmJiiQ3cQtyzA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Whistle</title>
+</head>
+<body class="has-navbar-fixed-top">
+    <div class="container">
+        <nav class="navbar is-fixed-top has-text-white" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a id="main-icon" class="navbar-item">
+                    <span class="icon is-medium">
+                        <i class="fas fa-2x fa-dove"></i>
+                    </span>
+                </a>
+                <div class="navbar-burger burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div id="nav-menu" class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <button id="feed-button" class="button is-rounded is-medium my-button" data-name="feed">
+                            <span class="icon">
+                                <i class="fas fa-newspaper"></i>
+                            </span>
+                            <span>Feed</span>
+                        </button>
+                    </div>
+                    <div class="navbar-item">
+                        <button id="top-button" class="button is-rounded is-medium" data-name="top">
+                            <span class="icon">
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <span>Top</span>
+                        </button>
+                    </div>
+                    <div class="navbar-item">
+                        <button id="profile-button" class="button is-rounded is-medium" data-name="profile">
+                            <span class="icon">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <span>Profile</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="columns is-centered">
+            <div id="cards-column" class="column is-6">
+                <%- include("partials/submit", {user: user}); %>
+            </div>
+            <div id="top-column" class="column is-6">
+            </div>
+            <div id="profile-column" class="column is-6">
+                <div id="submit-card" class="card is-shadowless">
+                    <div id="submit-card-content" class="card-content">
+                        <div class="media mb-2">
+                            <div class="media-content">
+                                <div class="columns is-centered">
+                                    <div class="column is-narrow">
+                                        <figure class="image is-128x128 has-text-centered">
+                                            <img class="is-rounded" src="<%= user.thumbnail %>" alt="Placeholder image">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h1 class="title has-text-centered mb-2">
+                                <%= user.username %>
+                            </h1>
+                        </div>
+                        <div>
+                            <a class="login button is-link" href="/auth/logout">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/index.js"></script>
+</body>
+</html>

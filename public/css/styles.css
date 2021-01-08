@@ -1,0 +1,177 @@
+html {
+    height: 100%;
+    overflow-y: auto;
+}
+
+body {
+    background-color: #15202b;
+    min-height: 100%;
+}
+
+.columns {
+    padding-top: 2%;
+}
+
+.card, .title, .subtitle {
+    background-color: transparent;
+    color: white;
+}
+
+.card {
+    border-top: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    border-bottom: 0;
+    border-style: solid;
+    border-color: white;
+    border-radius: 0%;
+}
+
+.card-footer {
+    padding-bottom: 9px;
+    border: none;
+    margin: auto;
+    width: 40%;
+}
+
+.card:last-child {
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 0%;
+}
+
+.navbar {
+    background-color: #15202b;
+    border-style: solid;
+    border-bottom: solid;
+    border-width: 2px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-color: white;
+}
+
+@media screen and (min-width: 1024px) {
+    .navbar {
+      width: 70%;
+      margin: auto;
+    }
+  }
+
+#nav-menu {
+    background-color: #15202b;
+}
+
+#main-icon, .navbar-burger {
+    color: white;
+}
+
+.navbar-brand {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#main-icon:hover, .navbar-burger:hover {
+    color: #1da1f2;
+}
+
+.button {
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+}
+
+.button:hover {
+    background-color: #1d2e43;
+    border-color: transparent;
+    color: #1da1f2;
+}
+
+.button:active {
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+}
+
+.button:focus {
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+}
+
+.textarea {
+    background-color: transparent;
+    resize: none;
+    color: white;
+}
+
+.textarea::placeholder {
+    color: #c2c2c2;
+}
+
+#submit-card {
+    border: none;
+    margin-bottom: 25px;
+    margin-top: 8px;
+}
+
+#submit-card-content {
+    padding: 2%;
+    margin: 0;
+}
+
+#submit-button {
+    background-color: #1da1f2;
+    color: white;
+}
+
+#submit-button:hover {
+    background-color: #2982dd
+}
+
+#image-button {
+    color: #1da1f2;
+    border: none;
+    margin-right: 5%;
+}
+
+.logo {
+    font-size: 700%;
+    color: white;
+    text-align: center;
+}
+
+.login {
+    width: 40%;
+    margin-left: 30%;
+}
+
+.is-vertical-center {
+    display: flex;
+    align-items: center;
+}
+
+#image-preview {
+    display: block;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+.active-element {
+    color: #1da1f2 !important;
+}
+
+#top-column {
+    display: none;
+}
+
+#profile-column {
+    display: none;
+}
+
+.media-content {
+    margin: auto;
+}

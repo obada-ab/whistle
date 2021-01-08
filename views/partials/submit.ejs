@@ -1,0 +1,37 @@
+<form class="card-form" enctype="multipart/form-data">
+    <div id="submit-card" class="card is-shadowless">
+        <div id="submit-card-content" class="card-content">
+            <div class="media">
+                <div class="media-left">
+                    <figure class="image is-48x48">
+                        <img class="is-rounded" src="<%= user.thumbnail %>" alt="Placeholder image">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="content">
+                <textarea id="card-textarea" name="content" 
+                placeholder="What's on your mind?" class="textarea"
+                maxlength="300" required></textarea>
+            </div>
+            <div id="image-preview-div" class="card-image">
+                <figure class="image">
+                    <img id="image-preview"/>
+                </figure>
+            </div>
+        </div>
+        <div class="card-footer">
+            <input type="file" name="image" id="image-input" hidden accept="image/*">
+            <button id="image-button" type="button" class="card-footer-item button is-rounded">
+                <span class="icon is-medium">
+                    <i class="fas fa-lg fa-file-image"></i>
+                </span>
+            </button>
+            <button type="submit" id="submit-button" class="card-footer-item button is-rounded">
+                <span class="icon">
+                    <i id="submit-button-icon" class="fas fa-dove"></i>
+                </span>
+            </button>
+        </div>
+    </div>
+</form>
